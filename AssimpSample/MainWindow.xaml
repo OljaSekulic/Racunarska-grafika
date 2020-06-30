@@ -1,0 +1,18 @@
+﻿<Window x:Class="AssimpSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SharpGL WPF Application" Height="350" Width="525" 
+        xmlns:sharpGL="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF" KeyDown="Window_KeyDown">
+    <Grid>
+        
+        <!-- The OpenGL control provides a OpenGL drawing surface. -->
+        <sharpGL:OpenGLControl 
+            Name="openGLControl" OpenGLDraw="openGLControl_OpenGLDraw" 
+            OpenGLInitialized="openGLControl_OpenGLInitialized" Resized="openGLControl_Resized"
+            DrawFPS="True" RenderContextType="FBO" FrameRate="10"/>
+        <TextBox x:Name="Stair_textBox" Height="25" HorizontalAlignment="Left" Margin="12,27,0,0" VerticalAlignment="Top" Width="110" />
+        <Button Content="Pomerite mol" Height="25" HorizontalAlignment="Left" Margin="12,56,0,0" Name="TranslateStair_btn" VerticalAlignment="Top" Width="110" Click="TranslateStair_btn_Click" />
+        <TextBox x:Name="Poles_textBox" Height="25" HorizontalAlignment="Left" Margin="12,100,0,0" VerticalAlignment="Top" Width="110" />
+        <Button Content="Pomerite stubove" Height="25" HorizontalAlignment="Left" Margin="12,130,0,0" Name="ScalePoles_btn" VerticalAlignment="Top" Width="110" Click="ScalePoles_btn_Click" />
+    </Grid>
+</Window>
